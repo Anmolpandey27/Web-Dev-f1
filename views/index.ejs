@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Medium</title>
+  </head>
+  <body>
+    <div style="background-color: rgb(247, 247, 121); margin-top: 0%;margin-left: 3;padding: 2px;">
+      <h1>Medium</h1>
+      <h2 style="color: white;">Discover Stories, Article and researches from GLA University</h2>
+    </div>
+    <br>
+    <button style="padding: 2px;background-color: aqua;border-radius: 5px;">Add New Articles</button>
+<br>
+<ul>
+  <% articles.forEach(function(article) { %>
+    <li><a href="/articles/<%= article._id %>"><%= article.title %></a></li>
+    <li><a href="/articles/<%= article._id %>"><%= article.date %></a></li>
+    <li><a href="/articles/<%= article._id %>"><%= article.content %></a></li>
+  <% }); %>
+</ul>
+    
+    
+  </body>
+</html>
